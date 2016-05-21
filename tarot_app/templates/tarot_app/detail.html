@@ -1,0 +1,8 @@
+<h1> {{ deck.name }}</h1>
+<p>date published: {{deck.pub_date}} </p>
+<p>{{ deck.description }}</p>
+
+{% for card in deck.card_set.all %}
+  <img src='{{ card.image_url }}'>
+  <p>{{ card.name }}</p>
+{% endfor %}
