@@ -1,3 +1,7 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'decks/style.css' %}" />
+
 {% if latest_deck_list %}
     <ul>
     {% for deck in latest_deck_list %}

@@ -1,3 +1,7 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'decks/style.css' %}" />
+
 <h1> {{ deck.name }}</h1>
 <p>date published: {{deck.pub_date}} </p>
 <p>{{ deck.description }}</p>
