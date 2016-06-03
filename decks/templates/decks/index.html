@@ -1,0 +1,9 @@
+{% if latest_deck_list %}
+    <ul>
+    {% for deck in latest_deck_list %}
+        <li><a href="{% url 'decks:detail' deck.id %}">{{ deck.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No decks have been made.</p>
+{% endif %}

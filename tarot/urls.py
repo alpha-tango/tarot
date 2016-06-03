@@ -2,6 +2,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^tarot_app/', include('tarot_app.urls')),
+    url(r'^decks/', include('decks.urls')),
     url(r'^admin/', admin.site.urls),
 ]
