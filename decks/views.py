@@ -17,6 +17,14 @@ class DetailView(generic.DetailView):
     model = Deck
     template_name = 'decks/detail.html'
 
+class UpdateDeck(generic.UpdateView):
+    model = Deck
+    fields = ['name', 'description']
+    template_name = 'decks/update_deck.html'
+
+    def get_success_url(self):
+        return reverse('decks:detail', args=(self.object.id,))
+
 def new_deck(request):
     if request.method == 'POST':
         form = NewDeck(request.POST)

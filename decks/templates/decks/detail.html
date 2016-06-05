@@ -6,6 +6,7 @@
 <p>date published: {{deck.pub_date}} </p>
 <p>{{ deck.description }}</p>
 
+<p><a href="{% url 'decks:update_deck' pk=deck.id %}">Want to change your deck name or description? You can edit it here.</a><p>
 <p><a href="{% url 'decks:new_card' pk=deck.id %}">Add a new card to this deck!</a></p>
 
 {% for card in deck.card_set.all %}
