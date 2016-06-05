@@ -5,7 +5,7 @@ from django.db import models
 class Deck(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('date published', auto_now_add=True)
 
     def __str__(self):
         return self.name
