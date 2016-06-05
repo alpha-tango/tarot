@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/new_card', views.new_card, name='new_card'),
     url(r'^(?P<pk>[0-9]+)/edit', views.UpdateDeck.as_view(), name='update_deck'),
     url(r'^(?P<pk>[0-9]+)/delete', views.DeleteDeck.as_view(), name='delete_deck'),
+    url(r'^card/(?P<pk>[0-9]+)/edit', views.UpdateCard.as_view(), name='update_card'),
+    url(r'^card/(?P<pk>[0-9]+)/delete', views.DeleteCard.as_view(), name='delete_card'),
 ]

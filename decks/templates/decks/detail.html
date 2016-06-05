@@ -13,5 +13,8 @@
 
 {% for card in deck.card_set.all %}
   <img src='{{ card.image_url }}'>
-  <p>{{ card.name }}</p>
+  <p>{{ card.name }}
+    <a href="{% url 'decks:update_card' pk=card.id %}">Edit</a>
+    <a href="{% url 'decks:delete_card' pk=card.id %}">Delete</a>
+  </p>
 {% endfor %}
