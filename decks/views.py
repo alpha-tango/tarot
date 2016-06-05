@@ -25,6 +25,11 @@ class UpdateDeck(generic.UpdateView):
     def get_success_url(self):
         return reverse('decks:detail', args=(self.object.id,))
 
+class DeleteDeck(generic.DeleteView):
+    model = Deck
+    def get_success_url(self):
+        return reverse('decks:index')
+
 def new_deck(request):
     if request.method == 'POST':
         form = NewDeck(request.POST)
