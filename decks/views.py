@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 
 from .models import Deck, Card
-from .forms import NewDeck
+from .forms import NewDeck, NewCard
 
 class IndexView(generic.ListView):
     template_name = 'decks/index.html'
@@ -27,3 +27,15 @@ def new_deck(request):
     else:
         form = NewDeck()
     return render(request, 'decks/create_deck.html', {'form': form})
+
+def new_card(request, pk):
+    deck = Deck.objects.filter(pk=pk).first()
+    if request.method == 'POST':
+        form = NewCard(request.POST)
+        if form.is_valid():
+            card = Card(deck=deck, **form.cleaned_data)
+            card.save()
+            return HttpResponseRedirect(reverse('decks:detail', args=(deck.id,)))
+    else:
+        form = NewCard()
+    return render(request, 'decks/create_card.html', {'form': form})
