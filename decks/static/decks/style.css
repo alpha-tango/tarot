@@ -3,5 +3,18 @@ li a {
 }
 
 body {
-    background: white url("images/wood_texture.jpg") no-repeat right bottom;
+    background: #fff1d2;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1 {
+  color: #573b0f;
+}
+
+p {
+  color: #748d3f;
+}
+
+a {
+  color: #d07a5d;
 }

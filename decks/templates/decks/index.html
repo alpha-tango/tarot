@@ -1,7 +1,8 @@
-{% load staticfiles %}
+{% extends "base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'decks/style.css' %}" />
+{%block title %}Create deck{% endblock %}
 
+{% block content %}
 <p><a href="{% url 'decks:new_deck' %}">Create a new deck!</a></p>
 
 {% if latest_deck_list %}
@@ -13,3 +14,4 @@
 {% else %}
     <p>No decks have been made.</p>
 {% endif %}
+{% endblock %}

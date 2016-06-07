@@ -1,5 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Create new card{% endblock %}
+
+{% block content %}
 <form action="new_card/" method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <input type="submit" value="Create"/>
 </form>
+{% endblock %}

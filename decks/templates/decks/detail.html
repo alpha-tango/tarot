@@ -1,7 +1,8 @@
-{% load staticfiles %}
+{% extends "base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'decks/style.css' %}" />
+{%block title %}{{ deck.name }}{% endblock %}
 
+{% block content %}
 <h1> {{ deck.name }}</h1>
 <p>date published: {{deck.pub_date}} </p>
 <p>{{ deck.description }}</p>
@@ -18,3 +19,4 @@
     <a href="{% url 'decks:delete_card' pk=card.id %}">Delete</a>
   </p>
 {% endfor %}
+{% endblock %}

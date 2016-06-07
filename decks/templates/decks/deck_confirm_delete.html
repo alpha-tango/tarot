@@ -1,6 +1,12 @@
+{% extends "base.html" %}
+
+{%block title %}Confirm deck delete{% endblock %}
+
+{% block content %}
 <form action="" method="post">
   {% csrf_token %}
   <p>Are you sure you want to delete "{{ deck.name }}" and all its cards?<br>
   This action cannot be undone.</p>
   <input type="submit" value="Yes, delete this deck" />
 </form>
+{% endblock %}
