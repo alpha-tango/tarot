@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
-{%block title %}Welcome{% endblock %}
+{% block title %}Welcome{% endblock %}
 
 {% block content %}
+<p><a href="{% url 'login' %}">Log in</a></p>
 <p><a href="{% url 'decks:index' %}">View and create custom Tarot Decks</a></p>
 {% endblock %}
