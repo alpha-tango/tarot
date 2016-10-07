@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'decks/style.css' %}" />
+</head>
+<body>
+    <h1>Tarot</h1>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <p>Created 2016.</p>
+    {% endblock %}
+</body>
+</html>
