@@ -13,11 +13,11 @@ COPYRIGHT_CHOICES = []
 
 class Profile(models.Model):
     user = models.OneToOneField(User)
-    credit_line = models.TextField()
-    copyright_owner = models.TextField()
-    copyright_status = models.IntegerField(choices=COPYRIGHT_CHOICES)
-    hide_from_searches = models.BooleanField()
-    allow_pinning = models.BooleanField()
+    # credit_line = models.TextField()
+    # copyright_owner = models.TextField()
+    # copyright_status = models.IntegerField(choices=COPYRIGHT_CHOICES)
+    # hide_from_searches = models.BooleanField()
+    # allow_pinning = models.BooleanField()
 
     # copyright status
     # hide stuff from searches
