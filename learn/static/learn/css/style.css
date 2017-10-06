@@ -1,0 +1,25 @@
+body {
+  background-color: #FFF9ED;
+  color: #4D382A
+}
+
+h4 {
+  color: #DB5800
+}
+
+.text-muted {
+  color: #979DA1 !important
+}
+
+.jumbotron {
+  background-color: #C9D0D4
+}
+
+a {
+  color: #6AA2C4
+}
+
+.btn-success {
+  color: #FFF9ED;
+  background-color: #5FB874
+}
