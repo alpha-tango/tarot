@@ -7,7 +7,7 @@
     {% for suit in object_list %}
       <div class="col-lg-6">
         <h4>{{ suit.name }}</h4>
-        <p>{{ suit.description | slice:"0:100" }}...<a href="">read more</a></p>
+        <p>{{ suit.description | slice:"0:100" }}...<a href="{% url 'learn:suit-detail' suit.id %}">read more</a></p>
       </div>
     {% endfor %}
   </div>

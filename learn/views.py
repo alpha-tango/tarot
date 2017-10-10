@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
-from learn.models import Suit
+from django.views.generic.detail import DetailView
+from learn.models import Suit, MinorArcana
 
 # Create your views here.
 
@@ -9,6 +10,12 @@ def index(request):
 
 class SuitList(ListView):
     model = Suit
+
+class SuitDetail(DetailView):
+    model = Suit
+
+class MinorArcanaDetail(DetailView):
+    model = MinorArcana
 
 def symbolism(request):
     return render(request, 'learn/symbolism.html')
