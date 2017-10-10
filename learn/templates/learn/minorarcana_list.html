@@ -1,0 +1,17 @@
+{% extends "learn/layout.html" %}
+
+{% block body %}
+<div class="container">
+  <div class="row marketing">
+    <h4>All minor arcana cards</h4>
+  </div><!--close row-->
+  <div class="row marketing">
+    {% for i in object_list %}
+      <div class="col-lg-3">
+        <p><a href="{% url 'learn:minorarcana-detail' i.id %}">{{i}}</a></p>
+      </div>
+    {% endfor %}
+  </div><!--close row-->
+</div><!--close container-->
+
+{% endblock %}

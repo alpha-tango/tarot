@@ -20,6 +20,9 @@ class RankList(ListView):
 class RankDetail(DetailView):
     model = Rank
 
+class MinorArcanaList(ListView):
+    model = MinorArcana
+
 class MinorArcanaDetail(DetailView):
     model = MinorArcana
 
