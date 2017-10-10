@@ -1,0 +1,16 @@
+{% extends "learn/layout.html" %}
+
+{% block body %}
+
+<div class="container">
+  <div class="row marketing">
+    {% for rank in object_list %}
+      <div class="col-lg-6">
+        <h4>{{ rank.name }}s</h4>
+        <p>{{ rank.description | slice:"0:100" }}...<a href="{% url 'learn:rank-detail' rank.id %}">read more</a></p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

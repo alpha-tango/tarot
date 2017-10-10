@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from learn.models import Suit, MinorArcana
+from learn.models import Suit, MinorArcana, Rank
 
 # Create your views here.
 
@@ -13,6 +13,12 @@ class SuitList(ListView):
 
 class SuitDetail(DetailView):
     model = Suit
+
+class RankList(ListView):
+    model = Rank
+
+class RankDetail(DetailView):
+    model = Rank
 
 class MinorArcanaDetail(DetailView):
     model = MinorArcana
