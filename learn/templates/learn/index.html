@@ -3,9 +3,9 @@
 {% block body %}
 <div class="container">
       <div class="jumbotron">
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1 class="display-3">Tarot is life-enhancing</h1>
+        <p class="lead">Tarot can be a thought-provoking meditation, a way to talk through issues with yourself or with friends or family, a guide to growth, or simply an enjoyable party game. Integrating tarot readings into your daily life can foster self-awareness and self-confidence, promote insight, and help reduce conflicts and stress.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">What is tarot?</a></p>
       </div>
 
       <div class="row marketing">
@@ -14,7 +14,7 @@
           <ul>
           <li><a href="{% url 'learn:suit-list' %}">By suit</a></li>
           <li><a href="{% url 'learn:rank-list' %}">By rank</a></li>
-          <li><a href="#">All cards</a></li>
+          <li><a href="{% url 'learn:minorarcana-list' %}">All cards</a></li>
           </ul>
 
           <h4>Learn the Major Arcana</h4>
@@ -28,6 +28,7 @@
           <h4>Explore themes in the cards</h4>
           <p>Coming soon!</p>
         </div>
-      </div>
+      </div><!--close row-->
+</div><!--close container-->
 
 {% endblock %}
